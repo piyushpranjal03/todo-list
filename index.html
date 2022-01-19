@@ -7,12 +7,14 @@
  <title>Document</title>
  <link rel="shortcut icon" href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com" type="image/x-icon">
 
+ <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.0.0-beta2/css/pro.css">
  <link rel="stylesheet" href="reset.min.css">
  <link rel="stylesheet" href="style.css">
- <script src="script" defer></script>
+
+ <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="no-select">
  <main>
   <!-- Tabs -->
   <nav>
@@ -24,12 +26,16 @@
 
   <!-- Day & Date -->
   <section class="date-section">
-   <div class="left-icon"></div>
+   <div>
+    <i class="icon fa-duotone fa-chevron-left fa-xl"></i>
+   </div>
    <div>
     <h1>Thursday</h1>
     <p>Mar 23, 2017</p>
    </div>
-   <div class="right-icon"></div>
+   <div>
+    <i class="icon fa-duotone fa-chevron-right fa-xl"></i>
+   </div>
   </section>
 
   <!-- Day Wise Task Container -->
@@ -38,125 +44,185 @@
   </div>
 
   <section class="task-section">
+
+   <!-- Single task -->
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">Getting an invite for dribbble</h2>
-     <p class="task-memo">One of my goal in 2017</p>
+     <h2 class="task-text">Getting an invite for dribbble</h2>
+     <p class="memo-text">One of my goal in 2017</p>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item pin">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item ">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
+    </div>
    </div>
    <hr>
+
+
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">11am meeting</h2>
+     <h2 class="task-text">11am meeting</h2>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
+    </div>
    </div>
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">Finish Visual Design</h2>
+     <h2 class="task-text">Finish Visual Design</h2>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
+    </div>
    </div>
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">Do research</h2>
-     <h2 class="task-memo">F-book readers in IOS, Android</h2>
+     <h2 class="task-text">Do research</h2>
+     <h2 class="memo-text">F-book readers in IOS, Android</h2>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
+    </div>
    </div>
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">Reading About Face 4</h2>
-     <p class="task-memo">F-book readers in IOS, Android</>
+     <h2 class="task-text">Reading About Face 4</h2>
+     <p class="memo-text">F-book readers in IOS, Android</>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
+    </div>
    </div>
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
+     <h2 class="task-text">do pilates</h2>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
+    </div>
    </div>
    <div class="task">
     <input type="checkbox" name="" id="">
     <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
+     <h2 class="task-text">do pilates</h2>
     </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
+    <div class="menu">
+     <div class="dropdown">
+      <div class="dropdown-item">
+       <i class="fa-solid fa-star fa-sm"></i>
+       Pin on the top
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-note fa-sm"></i>
+       Add a memo
+      </div>
+      <div class="dropdown-item">
+       <i class="fa-solid fa-trash-can fa-sm"></i>
+       Delete
+      </div>
+     </div>
     </div>
-    <div class="menu"></div>
    </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
-   <div class="task">
-    <input type="checkbox" name="" id="">
-    <div class="task-content">
-     <h2 class="task-title">do pilates</h2>
-    </div>
-    <div class="menu"></div>
-   </div>
+
+
 
   </section>
  </main>
 </body>
 
 </html>
+<!-- 
+input[type="checkbox"]::before {
+font: var(--fa-font-duotone);
+font-family: "Font Awesome 6 Pro";
+content: "\f08d";
+height: 16px;
+width: 16px;
+position: absolute;
+left: -1.5rem;
+visibility: visible;
+color: var(--light-pink);
+} -->

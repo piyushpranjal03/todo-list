@@ -5,14 +5,24 @@
   padding: 0;
   margin: 0;
 }
+.no-select {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 :root {
   --dark-pink: hsl(340, 70%, 62%);
   --light-pink: hsl(340, 77%, 65%);
-  --very-dark-gray: hsl(207, 10%, 23%);
-  --dark-gray: #3c4249;
-  --medium-gray: #9a9fa7;
-  --light-gray: #dde1e4;
+  --gray-1: hsl(207, 10%, 20%);
+  --gray-2: hsl(212, 10%, 26%);
+  --gray-3: hsl(217, 7%, 63%);
+  --gray-4: hsl(212, 10%, 28%);
+  --gray-5: hsl(206, 11%, 88%);
 }
 
 body {
@@ -22,18 +32,18 @@ body {
   justify-content: center;
   align-items: flex-start;
   font-family: "Montserrat", sans-serif;
-  color: var(--light-gray);
+  color: var(--gray-5);
   padding: 3.5rem 0;
 }
 
 a {
   text-decoration: none;
-  color: var(--light-gray);
+  color: var(--gray-5);
 }
 
 main {
   position: relative;
-  background-color: var(--dark-gray);
+  background-color: var(--gray-2);
   width: 64vh;
   min-height: 80vh;
   border-radius: 0.5rem;
@@ -45,7 +55,7 @@ nav {
   justify-content: space-between;
   padding: 0 18%;
   text-align: center;
-  border-bottom: 2px solid var(--very-dark-gray);
+  border-bottom: 2px solid var(--gray-1);
   font-weight: 500;
 }
 
@@ -54,26 +64,26 @@ nav a {
   width: 100%;
   font-weight: 500;
   padding-bottom: 0.5rem;
-  color: var(--medium-gray);
+  color: var(--gray-3);
   padding: 1.2rem 0;
 }
 
 nav a:hover {
   border-bottom: 2px solid var(--light-pink);
-  color: var(--light-gray);
+  color: var(--gray-5);
   transition: color 500ms, border-color 500ms;
 }
 
 .active {
   border-bottom: 2px solid var(--light-pink);
-  color: var(--light-gray);
+  color: var(--gray-5);
 }
 
 .date-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--light-gray);
+  color: var(--gray-5);
   text-align: center;
   padding: 10% 28%;
 }
@@ -85,22 +95,8 @@ nav a:hover {
 }
 
 .date-section p {
-  color: var(--medium-gray);
+  color: var(--gray-3);
   font-weight: 500;
-}
-
-.left-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' %3E%3Cpath fill='%239a9fa7' d='M37.9 46 24.1 32.3l13.8-13.7 2 2-11.8 11.7L39.9 44l-2 2' class='color134563 svgShape'/%3E%3C/svg%3E");
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-}
-
-.right-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' %3E%3Cpath fill='%239a9fa7' d='m26.1 46-2-2 11.8-11.7-11.8-11.7 2-2 13.8 13.7L26.1 46' class='color134563 svgShape'/%3E%3C/svg%3E");
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
 }
 
 .left-icon:hover,
@@ -113,11 +109,14 @@ nav a:hover {
 .add-task {
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 0 12%;
 }
 
 .task-section {
   height: 400px;
-  width: 75%;
+  width: 100%;
+  padding: 0 12%;
   margin: 0 auto;
   overflow: auto;
 }
@@ -127,25 +126,25 @@ nav a:hover {
 }
 
 input[type="text"] {
-  width: 75%;
+  width: 100%;
   position: relative;
-  background: var(--very-dark-gray);
+  background: var(--gray-1);
   height: 2.5rem;
   outline: none;
-  color: var(--medium-gray);
+  color: var(--gray-3);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   padding: 1.2rem 8px 1.2rem 46px;
   border-radius: 5px;
-  border: 2px solid hsl(207, 10%, 20%);
+  border: 2px solid var(--gray-1);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='none' d='M0 0h256v256H0z'/%3E%3Cpath fill='none' stroke='%239a9fa7' stroke-linecap='round' stroke-linejoin='round' stroke-width='8' d='M40 68h176M40 108h128M40.01 148H216M40.01 188H168' class='colorStroke000 svgStroke'/%3E%3C/svg%3E")
     8px center/30px no-repeat;
 }
 
 input:focus,
 input:hover {
-  color: var(--light-gray);
+  color: var(--gray-5);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' width='288' height='288'%3E%3Crect width='256' height='256' fill='none' /%3E%3Cline x1='40' x2='216' y1='68' y2='68' fill='none' stroke='%23dde1e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='8' class='colorStroke000 svgStroke' /%3E%3Cline x1='40' x2='168' y1='108' y2='108' fill='none' stroke='%23dde1e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='8' class='colorStroke000 svgStroke' /%3E%3Cline x1='40.006' x2='216' y1='148' y2='148' fill='none' stroke='%23dde1e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='8' class='colorStroke000 svgStroke' /%3E%3Cline x1='40.006' x2='168' y1='188' y2='188' fill='none' stroke='%23dde1e4' stroke-linecap='round' stroke-linejoin='round' stroke-width='8' class='colorStroke000 svgStroke' /%3E%3C/svg%3E")
     8px center/30px no-repeat;
 }
@@ -160,40 +159,98 @@ input::placeholder {
   margin-top: 1.5rem;
 }
 
+input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: var(--gray-4);
+  border: 2px solid var(--gray-1);
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+
+input[type="checkbox"]::after {
+  font-family: "Font Awesome 6 Pro";
+  font-size: 12px;
+  content: "\f00c";
+  padding: 2px;
+  visibility: hidden;
+  color: var(--gray-5);
+}
+
+input[type="checkbox"]:checked::after {
+  visibility: visible;
+}
+
+hr {
+  border: 1px solid var(--gray-1);
+  margin-top: 1.2rem;
+}
+
+.memo-text {
+  color: var(--gray-3);
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+}
+
 .menu {
-  color: var(--light-gray);
+  color: var(--gray-5);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' x='0' y='0' version='1.1' viewBox='0 0 29 29' xml:space='preserve' %3E%3Ccircle cx='14.5' cy='14.5' r='2.5' fill='%239a9fa7' class='color000 svgShape' /%3E%3Ccircle cx='4.5' cy='14.5' r='2.5' fill='%239a9fa7' class='color000 svgShape' /%3E%3Ccircle cx='24.5' cy='14.5' r='2.5' fill='%239a9fa7' class='color000 svgShape' /%3E%3Ccircle cx='14.5' cy='14.5' r='2.5' fill='%239a9fa7' class='color000 svgShape' /%3E%3Ccircle cx='4.5' cy='14.5' r='2.5' fill='%239a9fa7' class='color000 svgShape' /%3E%3Ccircle cx='24.5' cy='14.5' r='2.5' fill='%239a9fa7' class='color000 svgShape' /%3E%3C/svg%3E")
     center right/26px no-repeat;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .menu:hover {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='Layer_1' x='0' y='0' version='1.1' viewBox='0 0 29 29' xml:space='preserve' %3E%3Ccircle cx='14.5' cy='14.5' r='2.5' fill='%23dde1e4' class='color000 svgShape' /%3E%3Ccircle cx='4.5' cy='14.5' r='2.5' fill='%23dde1e4' class='color000 svgShape' /%3E%3Ccircle cx='24.5' cy='14.5' r='2.5' fill='%23dde1e4' class='color000 svgShape' /%3E%3Ccircle cx='14.5' cy='14.5' r='2.5' fill='%23dde1e4' class='color000 svgShape' /%3E%3Ccircle cx='4.5' cy='14.5' r='2.5' fill='%23dde1e4' class='color000 svgShape' /%3E%3Ccircle cx='24.5' cy='14.5' r='2.5' fill='%23dde1e4' class='color000 svgShape' /%3E%3C/svg%3E");
   cursor: pointer;
+  z-index: 50;
 }
 
-input[type="checkbox"] {
-  cursor: pointer;
-  outline: none;
-  background: var(--medium-gray);
-  border: 2px solid hsl(207, 10%, 20%);
-}
-
-input[type="checkbox"]:hover {
-  outline: none;
-  /* background: var(--medium-gray); */
-  background: red;
-  border: 2px solid hsl(207, 10%, 20%);
-}
-
-hr {
-  border: 1px solid var(--very-dark-gray);
-  margin-top: 1.2rem;
-}
-
-.task-memo {
-  color: var(--medium-gray);
+.dropdown {
   font-size: 0.9rem;
-  margin-top: 0.8rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: -8rem;
+  padding: 1rem;
+  background: var(--gray-4);
+  z-index: 1;
+  border-radius: 5px;
+  color: var(--gray-3);
+  font-weight: 500;
+  box-shadow: 2px 2px 5px 1px var(--gray-1);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.dropdown i {
+  width: 10px;
+  padding-right: 1rem;
+}
+
+.dropdown-item:not(:first-child) i {
+  margin-top: 1.4rem;
+}
+
+.dropdown-item:hover {
+  color: var(--gray-5);
+  transition: all 0.3s;
+}
+
+.icon {
+  color: var(--gray-3);
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: var(--gray-5);
 }
